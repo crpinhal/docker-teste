@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    image: httpd
+    container_name: meu-app-apache
+    ports:
+      - 80:80
+    volumes:
+      - ./www:/usr/local/apache2/htdocs
+
+volumes:
+  www:
